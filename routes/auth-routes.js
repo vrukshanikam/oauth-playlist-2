@@ -20,7 +20,8 @@ router.get('/google',passport.authenticate('google',{ //in passport-setup we hav
 }));
 
 //callback route for google to redirect to
-router.get('/google/redirect',(req,res) =>{
+//passport.authenticate comes back with the information, code in the url bar to the actual profile information
+router.get('/google/redirect',passport.authenticate('google'),(req,res) =>{
     res.send('You reached callback URI');
 });
 
