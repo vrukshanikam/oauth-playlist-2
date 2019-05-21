@@ -6,7 +6,7 @@ const keys = require('./keys');
 passport.use(
     new GoogleStrategy({
         //options for the google strategy
-        callbackURL: '/auth/google/redirect',
+        callbackURL: '/dev',
         clientID: 'keys.google.clientID',
         clientSecret: 'keys.google.clientSecret'
 

@@ -20,7 +20,7 @@ router.get('/google',passport.authenticate('google',{ //in passport-setup we hav
 }));
 
 //callback route for google to redirect to
-router.get('https://oauth-playlist-2015.herokuapp.com/auth/google/redirect',(req,res) =>{
+router.get('/google/redirect',(req,res) =>{
     res.send('You reached callback URI');
 });
 
