@@ -20,6 +20,9 @@ router.get('/google',passport.authenticate('google',{ //in passport-setup we hav
 }));
 
 //callback route for google to redirect to
-router.get('/google/redirect')
+router.get('/google/redirect',(req,res) =>{
+    res.send('You reached callback URI');
+});
+
 module.exports = router; //exporting router object to import in app.js
 //exporting all the handlers-login, logout
