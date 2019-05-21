@@ -6,7 +6,7 @@ const keys = require('./keys');
 passport.use(
     new GoogleStrategy({
         //options for the google strategy
-        callbackURL: '/login',
+        callbackURL: 'https://oauth-playlist-2015.herokuapp.com',
         clientID: 'keys.google.clientID',
         clientSecret: 'keys.google.clientSecret'
 
