@@ -6,6 +6,8 @@ const passportSetup = require('./config/passport-setup');
 
 const mongoose = require('mongoose');
 
+const keys = require('./config/keys');
+
 const app = express(); //instantiate app.js with express?
 //basically including express in app.js?
 
