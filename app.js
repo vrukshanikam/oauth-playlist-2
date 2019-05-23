@@ -4,11 +4,16 @@ const authRoutes = require('./routes/auth-routes'); //importing routes
 
 const passportSetup = require('./config/passport-setup');
 
+//const mongoose = require('mongoose');
+
 const app = express(); //instantiate app.js with express?
 //basically including express in app.js?
 
 //set up view engine
 app.set('view engine', 'ejs');
+
+//connect to mongodb
+mongoose.connect()
 
 //set up routes
 app.use('/auth',authRoutes); //when the user goes to /auth/(something) /auth/login or logout or google
