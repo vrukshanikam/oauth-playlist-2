@@ -11,10 +11,11 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.17.0",
+    "mongoose": "^5.5.10",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0"
   },
-  "engines":{
+  "engines": {
     "node": "v10.15.3"
   }
 }
