@@ -15,8 +15,8 @@ const app = express(); //instantiate app.js with express?
 app.set('view engine', 'ejs');
 
 //connect to mongodb
-mongoose.connect("mongodb://oauth-playlist-2015.herokuapp.com");
-console.log('connected');
+//mongoose.connect("mongodb://oauth-playlist-2015.herokuapp.com");
+//console.log('connected');
 
 //set up routes
 app.use('/auth',authRoutes); //when the user goes to /auth/(something) /auth/login or logout or google
