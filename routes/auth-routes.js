@@ -1,11 +1,10 @@
 //all of the authentication routes settles in here
 const router = require('express').Router(); //no idea?
-
 const passport = require('passport');
 
 //auth login
 router.get('/login',(req,res) =>{
-    res.render('login');
+    res.render('login', { user: req.user });
 });
 
 //auth logout
@@ -19,12 +18,9 @@ router.get('/google',passport.authenticate('google',{ //in passport-setup we hav
     scope: ['profile'] //['profile,'email'] etc
 }));
 
-/*//callback route for google to redirect to
-//passport.authenticate comes back with the information, code in the url bar to the actual profile information
-router.get('/google/redirect',passport.authenticate('google'),(req,res) =>{
-    res.send('You reached callback URI');
+// callback route for google to redirect to
+router.get('/google/redirect', (req, res) => {
+    res.send('you reached the redirect URI');
 });
 
-module.exports = router; //exporting router object to import in app.js
-//exporting all the handlers-login, logout*/
-
+module.exports = router;

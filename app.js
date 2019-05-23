@@ -12,9 +12,6 @@ const app = express(); //instantiate app.js with express?
 //set up view engine
 app.set('view engine', 'ejs');
 
-//connect to mongodb
-mongoose.connect()
-
 //set up routes
 app.use('/auth',authRoutes); //when the user goes to /auth/(something) /auth/login or logout or google
 
