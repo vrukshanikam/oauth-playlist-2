@@ -5,6 +5,7 @@ const passport = require('passport');
 //auth login
 router.get('/login',(req,res) =>{
     res.render('login', { user: req.user });
+    console.log('logging in');
 });
 
 //auth logout
