@@ -4,9 +4,9 @@ const authRoutes = require('./routes/auth-routes'); //importing routes
 
 const passportSetup = require('./config/passport-setup');
 
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
-const keys = require('./config/keys');
+//const keys = require('./config/keys');
 
 const app = express(); //instantiate app.js with express?
 //basically including express in app.js?
@@ -26,7 +26,7 @@ app.get('/',(req,res) => {
     res.render('home');
 
 });
-app.listen((process.env.PORT || 6000),() =>{
-    console.log('app is now listening to 6000');
+app.listen((process.env.PORT || 7000),() =>{
+    console.log('app is now listening to 7000');
 });
 
