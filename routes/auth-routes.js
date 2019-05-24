@@ -20,7 +20,7 @@ router.get('/google', passport.authenticate('google',{
 //here passport.authenticate takes me to the google login
 
 // callback route for google to redirect to
-router.get('/google/redirect',(req, res) => {
+router.get('/google/redirect',passport.authenticate('google'),(req, res) => {
     res.send('you reached the redirect URI');
 });//here authenticate.google exchanges the user code for profile information
 

@@ -11,6 +11,7 @@ passport.use(
         callbackURL: 'https://oauth-playlist-2015.herokuapp.com/auth/google/redirect'
     },() =>{
         //passport callback 
+        alert('passport_fired');
     })
 )
 
