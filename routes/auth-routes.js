@@ -10,7 +10,7 @@ router.get('/login',(req,res) =>{
 router.get('/logout', (req,res) =>{
     //handle with passport 
     req.logout();
-    res.redirect('/home');
+    res.redirect('/');
 });
 
 router.get('/google', passport.authenticate('google',{
