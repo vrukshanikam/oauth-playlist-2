@@ -3,37 +3,24 @@ const authRoutes = require('./routes/auth-routes');
 
 const passportSetup = require('./config/passport-setup');
 
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-//const keys = require('./config/keys');
+const keys = require('./config/keys');
 //const cookieSession = require('cookie-session');
 //const passport = require('passport');
 
-const app = express(); //instantiate app.js with express?
-//basically including express in app.js?
+const app = express();
 
 //set up view engine
 app.set('view engine', 'ejs');
 
+//connect to mongodb
+mongoose.connect(keys.mongodb.dbURI,()=>{
+    console.log('connected');
+});
+
 app.use('/auth',authRoutes);
 
-/*app.use(cookieSession({
-    maxAge: 24 * 60 * 60 *1000,
-    keys: ['iamawesome']
-}))*
-
-//initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-//connect to mongodb
-mongoose.connect("mongodb://oauth-playlist-2015.herokuapp.com");
-console.log('connected');
-
-//set up routes
- //when the user goes to /auth/(something) /auth/login or logout or google
-*/
-//create home route, // if I type in honeys-macbook-local, render me to the home page
 app.get('/',(req,res) => {
     res.render('home');
 
