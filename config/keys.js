@@ -6,6 +6,6 @@ module.exports = {
         clientSecret: 'RDTgSn28uZeReD11K7ebU1fL'
     },
     mongodb:{
-        dbURI: 'mongodb+srv://vruksha:<password>@cluster0-mqjwm.mongodb.net/test?retryWrites=true'
+        dbURI: 'mongodb+srv://vruksha:123@cluster0-mqjwm.mongodb.net/test?retryWrites=true'
     }
 };
