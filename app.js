@@ -1,4 +1,5 @@
 const express = require('express'); 
+const morgan = require('morgan');
 const authRoutes = require('./routes/auth-routes'); 
 const profileRoutes = require('./routes/profile-routes'); 
 
